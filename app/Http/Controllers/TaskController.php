@@ -8,6 +8,10 @@ class TaskController extends Controller
 {
     public function index()
     {
-        return "Hellow world";
+        $folders = Folder::all();
+
+        return view('task/index', [
+            'folders' => $folders,
+        ]);
     }
 }
