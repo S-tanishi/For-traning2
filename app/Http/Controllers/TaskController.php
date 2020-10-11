@@ -7,7 +7,7 @@ use App\Models\Folder;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index(int $id)
     {
         $folders = Folder::all();
 
