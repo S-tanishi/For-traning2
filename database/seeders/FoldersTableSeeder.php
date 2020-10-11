@@ -13,6 +13,6 @@ class FoldersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $title = ['プライベート', '仕事', '旅行'];
     }
 }
