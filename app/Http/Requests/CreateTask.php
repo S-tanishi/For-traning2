@@ -13,7 +13,7 @@ class CreateTask extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class CreateTask extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|max:100',
+            'due_date' => 'required|date|after_or_equal:today',
         ];
     }
 }
