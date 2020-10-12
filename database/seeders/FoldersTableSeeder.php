@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class FoldersTableSeeder extends Seeder
@@ -13,6 +14,14 @@ class FoldersTableSeeder extends Seeder
      */
     public function run()
     {
-        $title = ['プライベート', '仕事', '旅行'];
+        $title = ['プライベート', '仕事', '旅行']; 
+
+        foreach ($titles as $title) {
+            DB::table('folders')->insert([
+                'title' => $title,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ]);
+        }
     }
 }
