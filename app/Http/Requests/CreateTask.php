@@ -28,4 +28,19 @@ class CreateTask extends FormRequest
             'due_date' => 'required|date|after_or_equal:today',
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'title' => 'タイトル',
+            'due_date' => '期限日',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'due_date.after_or_equal' => ':attribute には今日以降日付を入力してください。'
+        ];
+    }
 }
