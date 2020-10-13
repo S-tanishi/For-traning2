@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TasksTableSeeder extends Seeder
 {
@@ -21,7 +22,7 @@ class TasksTableSeeder extends Seeder
                 'status' => $num,
                 'due_date' => Carbon::now()->addDay($num),
                 'created_at' => Carbon::now(),
-                'updated-at' => Carbon:;now(),
+                'updated_at' => Carbon:;now(),
             ]);
         }
     }
