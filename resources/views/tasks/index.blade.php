@@ -48,7 +48,7 @@
                 <tr>
                   <td>{{ $task->title }}</td>
                   <td>
-                    <span class="label">{{ $task->status }}</span>
+                    <span class="label">{{ $task->status_label }}</span>
                   </td>
                   <td>{{ $tasks->due_date }}</td>
                   <td><a href="#">編集</a></td>
